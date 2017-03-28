@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2014-2017, The Truck Project
 // 
 // All rights reserved.
 // 
@@ -284,11 +284,11 @@ void BlockchainDB::fixup()
   // The key images below are those from the inputs in those transactions.
   // On testnet, there are no such transactions
   // See commit 533acc30eda7792c802ea8b6417917fa99b8bc2b for the fix
-  static const char * const mainnet_genesis_hex = "418015bb9ae982a1975da7d79277c2705727a56894ba0fb246adaabb1f4632e3";
+  static const char * const mainnet_genesis_hex = "7b3427e3a257daefd652c32d48370416a7aee9565aa7823e521beb28a78726ce";
   crypto::hash mainnet_genesis_hash;
   epee::string_tools::hex_to_pod(mainnet_genesis_hex, mainnet_genesis_hash );
   set_batch_transactions(true);
-  batch_start();
+  /*batch_start();
 
   if (get_block_hash_from_height(0) == mainnet_genesis_hash)
   {
@@ -852,7 +852,7 @@ void BlockchainDB::fixup()
       }
     }
   }
-  batch_stop();
+  batch_stop();*/
 }
 
 }  // namespace cryptonote
