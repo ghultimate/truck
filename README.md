@@ -1,6 +1,6 @@
 # Truck
 
-Copyright (c) 2014-2017, The Monero Project
+Copyright (c) 2014-2017, The Truck Project
 
 ## Development Resources
 
