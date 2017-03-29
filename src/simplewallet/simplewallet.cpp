@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2014-2017, The Truck Project
 // 
 // All rights reserved.
 // 
@@ -75,7 +75,7 @@ typedef cryptonote::simple_wallet sw;
 
 #define DEFAULT_MIX 4
 
-#define OUTPUT_EXPORT_FILE_MAGIC "Monero output export\003"
+#define OUTPUT_EXPORT_FILE_MAGIC "Truck output export\003"
 
 #define LOCK_IDLE_SCOPE() \
   bool auto_refresh_enabled = m_auto_refresh_enabled.load(std::memory_order_relaxed); \
@@ -3001,8 +3001,8 @@ bool simple_wallet::donate(const std::vector<std::string> &args_)
      return true;
   }
   std::string mixin_str;
-  // Hardcode Monero's donation address (see #1447)
-  const std::string address_str = "44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A";
+  // Hardcode 's donation address (see #1447)
+  const std::string address_str = "";
   std::string amount_str;
   std::string payment_id_str;
   // check payment id
@@ -3029,7 +3029,7 @@ bool simple_wallet::donate(const std::vector<std::string> &args_)
   local_args.push_back(amount_str);
   if (!payment_id_str.empty())
     local_args.push_back(payment_id_str);
-  message_writer() << tr("Donating ") << amount_str << " XMR to The Monero Project (donate.getmonero.org/44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A).";
+  message_writer() << tr("Investing ") << amount_str << " TKC to The Truck Project.";
   transfer_new(local_args);
   return true;
 }
