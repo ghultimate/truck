@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2014-2017, The Truck Project
 // 
 // All rights reserved.
 // 
@@ -79,8 +79,8 @@ using namespace cryptonote;
 // arbitrary, used to generate different hashes from the same input
 #define CHACHA8_KEY_TAIL 0x8c
 
-#define UNSIGNED_TX_PREFIX "Monero unsigned tx set\003"
-#define SIGNED_TX_PREFIX "Monero signed tx set\003"
+#define UNSIGNED_TX_PREFIX "Truck unsigned tx set\003"
+#define SIGNED_TX_PREFIX "Truck signed tx set\003"
 
 #define RECENT_OUTPUT_RATIO (0.25) // 25% of outputs are from the recent zone
 #define RECENT_OUTPUT_ZONE (5 * 86400) // last 5 days are the recent zone
@@ -97,7 +97,7 @@ using namespace cryptonote;
       ioservice.stop(); \
     } while(0)
 
-#define KEY_IMAGE_EXPORT_FILE_MAGIC "Monero key image export\002"
+#define KEY_IMAGE_EXPORT_FILE_MAGIC "Truck key image export\002"
 
 namespace
 {
