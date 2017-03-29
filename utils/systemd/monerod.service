@@ -1,14 +1,14 @@
 [Unit]
-Description=Monero Full Node
+Description=Truck Full Node
 After=network.target
 
 [Service]
-User=monero
-Group=monero
+User=truck
+Group=truck
 WorkingDirectory=~
 
 Type=forking
-ExecStart=/usr/bin/monerod --config-file /etc/monerod.conf --detach
+ExecStart=/usr/bin/monerod --config-file /etc/truckd.conf --detach
 
 # This is necessary because monerod does not yet support
 # writing a PID file, which means systemd tries to guess the PID
